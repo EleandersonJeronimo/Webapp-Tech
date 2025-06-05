@@ -13,7 +13,7 @@ const signUpSchema = z.object({
     email: z.string().email({message: "Email invalido"}),
     password: z.string().min(6, {message: "Senha deve ter pelo menos 6 digitos"}),
     name: z.string().trim().min(1, {message: "Informe o nome"}),
-    type: z.enum(["nubank", "itaú", "bradesco", "caixa"]),
+    type: z.enum(["corrente", "poupança", "crédito", "investimento"]),
     balance: z.string().optional()
     
 })
